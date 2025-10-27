@@ -1,12 +1,13 @@
 package main;
 
+import java.awt.*;
+import java.net.URI;
 import java.util.Scanner;
 
 public class UserInput {
     public static void menu(){
         Scanner scanner = new Scanner(System.in);
         boolean isContinue = true;
-        String userInput = "";
         while(isContinue){
             System.out.println("""
                     -----------Menu-----------
@@ -17,16 +18,19 @@ public class UserInput {
                     --------------------------
                     """);
             System.out.print("Please select a menu > ");
-            userInput = scanner.nextLine();
+            String userInput = scanner.nextLine();
             switch (userInput){
                 case "A" -> {
                     System.out.println("Selected A");
+                    Utils.openTaipingUPL();
                 }
                 case "B" -> {
                     System.out.println("Selected B");
+
                 }
                 case "C" -> {
                     System.out.println("Selected C");
+
                 }
                 case "Q" -> {
                     System.out.println("Selected Q");
@@ -34,7 +38,7 @@ public class UserInput {
                     isContinue = false;
                 }
                 default -> {
-                    System.out.println("Please enter either A, B, or C");
+                    System.out.println("Please enter either A, B, or C.");
                 }
             }
         }
