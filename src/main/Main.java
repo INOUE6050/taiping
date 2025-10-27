@@ -7,5 +7,7 @@ public class Main{
                 |   Taiping Level Checker   |
                 |===========================|
                 """);
+
+        
     }
 }
