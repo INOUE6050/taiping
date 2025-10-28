@@ -2,7 +2,7 @@ package main;
 
 public class Display {
     public static void disOneResult(double[] d){
-
+        System.out.println();
         System.out.println(String.format("""
                 ------------Result-------------
                          Time(seconds): %.0f
