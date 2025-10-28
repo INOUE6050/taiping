@@ -7,6 +7,8 @@ public class Main{
                         |   Taiping Level Checker   |
                         |===========================|
                 This app measures and stores your typing speed.""");
-        UserInput.menu();
+
+        Menu.menu();
+
     }
 }
