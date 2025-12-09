@@ -1,4 +1,4 @@
-package main;
+package main.application;
 
 public class TypingResult {
     private final double timeSeconds;

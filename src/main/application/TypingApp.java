@@ -1,4 +1,4 @@
-package main;
+package main.application;
 
 public class TypingApp {
     private final Menu menu;

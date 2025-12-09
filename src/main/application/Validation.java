@@ -1,4 +1,4 @@
-package main;
+package main.application;
 
 public class Validation {
     public static boolean validTime(String time){

@@ -1,4 +1,7 @@
-package main;
+package main.presentation;
+
+import main.application.TypingResult;
+import main.application.TypingResultRecord;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;

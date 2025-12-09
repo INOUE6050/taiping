@@ -1,4 +1,7 @@
-package main;
+package main.data;
+
+import main.application.TypingResult;
+import main.application.TypingResultRecord;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

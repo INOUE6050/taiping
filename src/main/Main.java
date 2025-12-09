@@ -1,5 +1,7 @@
 package main;
 
+import main.application.TypingApp;
+
 public class Main {
     public static void main(String[] args){
         System.out.println("""

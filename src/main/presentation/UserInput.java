@@ -1,4 +1,8 @@
-package main;
+package main.presentation;
+
+import main.application.Utils;
+import main.application.Validation;
+import main.application.TypingResult;
 
 import java.util.Scanner;
 

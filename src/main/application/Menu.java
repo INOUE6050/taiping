@@ -1,4 +1,8 @@
-package main;
+package main.application;
+
+import main.data.TypingResultsRepository;
+import main.presentation.UserInput;
+import main.presentation.Display;
 
 import java.util.Scanner;
 

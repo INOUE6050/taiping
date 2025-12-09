@@ -1,4 +1,4 @@
-package main;
+package main.application;
 
 import java.awt.*;
 import java.net.URI;
