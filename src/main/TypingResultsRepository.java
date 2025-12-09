@@ -7,11 +7,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TypingResultsRepository {
     private final Path filePath;
+    private static final DateTimeFormatter FORMATTER =
+            DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 
     public TypingResultsRepository(String fileName) {
         this.filePath = Path.of(fileName);
@@ -21,8 +24,9 @@ public class TypingResultsRepository {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath.toFile(), true))){
             List<TypingResultRecord> records = loadAllResults();
             double averageThree = calcAverageThreeMinAns(records, result.getThreeMinAns());
+            String now = LocalDateTime.now().format(FORMATTER);
 
-            writer.write(LocalDateTime.now() + ","
+            writer.write(now + ","
                     + result.getCharsPerSec() + ","
                     + result.getThreeMinAns() + ","
                     + averageThree);
@@ -41,7 +45,7 @@ public class TypingResultsRepository {
             while((line = reader.readLine()) != null){
                 String[] parts = line.split(",");
                 records.add(new TypingResultRecord(
-                        LocalDateTime.parse(parts[0]),
+                        LocalDateTime.parse(parts[0], FORMATTER),
                         Double.parseDouble(parts[1]),
                         Double.parseDouble(parts[2]),
                         Double.parseDouble(parts[3])
@@ -57,7 +61,7 @@ public class TypingResultsRepository {
         double sum = currentThreeMinAns;
         double count = 1;
         for(TypingResultRecord r : records){
-            sum += r.averageThreeMinAns();
+            sum += r.threeMinAns();
             count++;
         }
         return sum/count;

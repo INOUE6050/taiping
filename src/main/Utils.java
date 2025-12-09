@@ -4,7 +4,7 @@ import java.awt.*;
 import java.net.URI;
 
 public class Utils {
-    public static void openTaipingUPL(){
+    public static void openTypingUPL(){
         try {
             URI uri = new URI("https://typing-training.net/");
             if (Desktop.isDesktopSupported()) {

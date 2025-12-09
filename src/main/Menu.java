@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
     private final UserInput ui;
-    private final TypingResultsRepository repo = new TypingResultsRepository("src/resources/taiping_data.csv");
+    private final TypingResultsRepository repo = new TypingResultsRepository("src/resources/typing_data.csv");
 
     public Menu() {
         this.ui = new UserInput();
@@ -16,7 +16,7 @@ public class Menu {
         while(isContinue){
             System.out.println("""
                     -----------Menu-----------
-                      A. Taiping URL
+                      A. Typing URL
                       B. Result input
                       C. List of past results
                       Q. Quit
@@ -27,7 +27,7 @@ public class Menu {
             switch (userInput){
                 case "A" -> {
                     System.out.println("Selected A");
-                    Utils.openTaipingUPL();
+                    Utils.openTypingUPL();
                 }
                 case "B" -> {
                     System.out.println("Selected B");
@@ -37,6 +37,7 @@ public class Menu {
                 }
                 case "C" -> {
                     System.out.println("Selected C");
+                    Display.disAllResults(repo.loadAllResults());
 
                 }
                 case "Q" -> {
