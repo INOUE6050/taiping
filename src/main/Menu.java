@@ -3,8 +3,13 @@ package main;
 import java.util.Scanner;
 
 public class Menu {
-    public static void menu(){
-        UserInput ui = new UserInput();
+    private final UserInput ui;
+
+    public Menu() {
+        this.ui = new UserInput();
+    }
+
+    public void show(){
         Scanner scanner = new Scanner(System.in);
         boolean isContinue = true;
         while(isContinue){
@@ -25,7 +30,8 @@ public class Menu {
                 }
                 case "B" -> {
                     System.out.println("Selected B");
-                    Display.disOneResult(ui.inputResult());
+                    TypingResult result = ui.inputTypingResult();
+                    Display.disOneResult(result);
                 }
                 case "C" -> {
                     System.out.println("Selected C");

@@ -1,6 +1,6 @@
 package main;
 
-public class Main{
+public class Main {
     public static void main(String[] args){
         System.out.println("""
                 |===========================|
@@ -9,7 +9,7 @@ public class Main{
                 This app measures and stores 
                            your typing speed.""");
 
-        Menu.menu();
-
+        TypingApp app = new TypingApp();
+        app.run();
     }
 }

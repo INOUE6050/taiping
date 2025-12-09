@@ -3,12 +3,10 @@ package main;
 import java.util.Scanner;
 
 public class UserInput {
-
-
-    public double[] inputResult(){
+    public TypingResult inputTypingResult(){
         double time = inputTime();
         double charLength = inputCharLength();
-        return new double[]{time, charLength};
+        return new TypingResult(time, charLength);
     }
 
     public double inputTime(){

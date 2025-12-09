@@ -23,14 +23,4 @@ public class Utils {
         double doubleSec = Double.parseDouble(sec);
         return doubleMin * 60 + doubleSec;
     }
-
-    public static double threeMinAns(double charLength, double time){
-        double answer = ( charLength / time) * 180;
-        return answer;
-    }
-
-    public static double chaperSec(double charLength, double time){
-        double answer = charLength / time;
-        return answer;
-    }
 }
