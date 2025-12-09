@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
     private final UserInput ui;
+    private final TypingResultsRepository repo = new TypingResultsRepository("src/resources/taiping_data.csv");
 
     public Menu() {
         this.ui = new UserInput();
@@ -31,6 +32,7 @@ public class Menu {
                 case "B" -> {
                     System.out.println("Selected B");
                     TypingResult result = ui.inputTypingResult();
+                    repo.saveResult(result);
                     Display.disOneResult(result);
                 }
                 case "C" -> {
