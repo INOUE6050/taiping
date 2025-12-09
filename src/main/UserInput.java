@@ -3,13 +3,15 @@ package main;
 import java.util.Scanner;
 
 public class UserInput {
-    public static double[] inputResult(){
+
+
+    public double[] inputResult(){
         double time = inputTime();
         double charLength = inputCharLength();
         return new double[]{time, charLength};
     }
 
-    public static double inputTime(){
+    public double inputTime(){
         Scanner scanner = new Scanner(System.in);
         boolean isContinue = true;
         String time = "";
@@ -26,7 +28,7 @@ public class UserInput {
         return Utils.parseTimeToSeconds(parts[0], parts[1]);
     }
 
-    public static double inputCharLength(){
+    public double inputCharLength(){
         Scanner scanner = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
         System.out.println("""

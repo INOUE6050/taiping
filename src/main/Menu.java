@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
     public static void menu(){
+        UserInput ui = new UserInput();
         Scanner scanner = new Scanner(System.in);
         boolean isContinue = true;
         while(isContinue){
@@ -24,7 +25,7 @@ public class Menu {
                 }
                 case "B" -> {
                     System.out.println("Selected B");
-                    Display.disOneResult(UserInput.inputResult());
+                    Display.disOneResult(ui.inputResult());
                 }
                 case "C" -> {
                     System.out.println("Selected C");
